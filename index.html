@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Light Bulb</title>
+  <style>
+    .container {
+      text-align: center;
+      justify-content: center;
+      margin-left: none;
+      margin-left: 20%;
+      margin-top: 50px;
+    }
+
+    #bulb {
+      width: 200px;
+      height: 200px;
+      margin-top: 20px;
+    }
+
+    #toggleButton {
+      width: 150px;
+      height: 50px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    body{
+      background-color: rgb(22, 139, 222);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button id="toggleButton" onclick="toggleBulb()">Turn On</button>
+    <img id="bulb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHzkqP-WtWBICP2aO7eNIbUgGbgonEp0oz5Q&usqp=CAU">
+  </div>
+
+  <script>
+    function toggleBulb() {
+      var bulb = document.getElementById("bulb");
+      var toggleButton = document.getElementById("toggleButton");
+
+      if (bulb.getAttribute("src") === "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHzkqP-WtWBICP2aO7eNIbUgGbgonEp0oz5Q&usqp=CAU") {
+        bulb.setAttribute("src", "https://5.imimg.com/data5/SELLER/Default/2022/4/TN/YY/OO/79606103/foxsun-rechargable-inverter-led-bulb-500x500.png");
+        toggleButton.innerHTML = "Turn Off";
+        toggleButton.style.backgroundColor = "red";
+      } else {
+        bulb.setAttribute("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHzkqP-WtWBICP2aO7eNIbUgGbgonEp0oz5Q&usqp=CAU");
+        toggleButton.innerHTML = "Turn On";
+        toggleButton.style.backgroundColor = "green";
+      }
+    }
+  </script>
+</body>
+</html>
+
